@@ -1,18 +1,23 @@
-#Factorial of a number using recursion
+class player:
 
-def recur_factorial(n):
-  if n == 1:
-    return n
-  else:
-    return n * recur_factorial(n - 1)
+  def play(self):
+    print("the player is playing cricket.")
 
 
-num = int(input("enter the number : "))
+class Batsman(player):
 
-# check if the number is negative
-if num < 0:
-  print("Sorry, factorial does not exist for negative numbers")
-elif num == 0:
-  print("The factorial of 0 is 1")
-else:
-  print("The factorial of", num, "is", recur_factorial(num))
+  def play(self):
+    print("the batsman is batting.")
+
+
+class Bowler(player):
+
+  def play(self):
+    print("the bowler is bowling.")
+
+
+batsman = Batsman()
+bowler = Bowler()
+
+batsman.play()
+bowler.play()
